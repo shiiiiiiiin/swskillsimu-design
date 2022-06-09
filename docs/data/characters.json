@@ -1,0 +1,41 @@
+{
+    "characters": [
+        {
+            "name": "Haru",
+            "jpname": "ハル"
+        },
+        {
+            "name": "Erwin",
+            "jpname": "アーウィン"
+
+        },
+        {
+            "name": "Lily",
+            "jpname": "リリー"
+        },
+        {
+            "name": "Stella",
+            "jpname": "ステラ"
+        },
+        {
+            "name": "Jin",
+            "jpname": "ジン"
+        },
+        {
+            "name": "Iris",
+            "jpname": "イリス"
+        },
+        {
+            "name": "Chii",
+            "jpname": "チイ"
+        },
+        {
+            "name": "Ephnel",
+            "jpname": "エフネル"
+        },
+        {
+            "name": "Nabi",
+            "jpname": "ナビ"
+        }
+    ]
+}

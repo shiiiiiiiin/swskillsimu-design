@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulWorker Skill Simulator</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/jquery-sakura.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="bg-fixed bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/images/bg4.png');">     
+    <div class="container mx-auto px-4">
+        <img class="mt-20 mb-10 mx-auto w-auto" src="./assets/images/logo_soulworker.png" alt="SoulWorker">
+
+        <!-- About Skill Simulator -->
+        <div class="flex flex-col">
+            <div class="relative mt-8 px-8 py-6 bg-secondary-800 z-10 -skew-x-6 transform-gpu shadow-lg">
+                <h1 class="tracking-[0.2em] text-2xl font-extrabold text-white uppercase skew-x-6 transform-gpu">
+                    about skill simulator
+                    <span class="block -mt-1 text-base -skew-x-12">スキルシミュレータについて</span>
+                </h1>
+            </div>
+            <div class="relative -mt-4 mx-8 px-8 pt-8 pb-6 bg-secondary-700">
+                <div class="text-white space-y-2">
+                    <p>
+                        The skill simulator is made based on the information from the Korean, Japan, and Global (<span class="italic">Steam</span>) version of SoulWorker.
+                    </p>
+                    <p>
+                        This skill simulator require javascript turned on.
+                    </p>    
+                    <p>
+                        The skill simulator should work on most of modern browsers.
+                        Tested on (10.May.2022): Edge v101, Firefox v100, Chrome v101, Opera GX v85.
+                        As of now, the simulator video has skill preview video (<span class="italic">which require <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">Promise</a> object</span>).
+                        <span id="isPromiseSupported"></span>
+                    </p>
+                    <p>
+                        Full change-log can be found here: <a class="link" href="https://github.com/Eden333/swskillsimu/commits/master" target="_blank">Github Repository commit log</a> or here: 
+                        <a class="link" href="https://github.com/Eden333/swskillsimu/blob/master/CHANGELOG.md" target="_blank">CHANGELOG</a>.
+                    </p>
+                </div> 
+            </div>
+        </div>
+        
+        <!-- Character Selection -->
+        <div class="relative mt-8 px-8 py-6 bg-secondary-800 z-10 -skew-x-6 transform-gpu pointer-events-none shadow-lg">
+            <h1 class="tracking-[0.2em] text-2xl font-extrabold text-white uppercase skew-x-6 transform-gpu">
+                character selection
+                <span class="block -mt-1 text-base -skew-x-12">キャラクター選択</span>
+            </h1>
+        </div>
+        <div class="relative -mt-4 mx-8 pt-4 bg-secondary-700">
+            <noscript>
+                <p class="bg-danger-500 text-white font-semibold px-8 py-6">
+                    You won't be able to see any characters because Javascript is disabled.
+                </p>
+            </noscript>
+
+            <div class="-mt-1 grid grid-cols-2 md:grid-cols-5 lg:grid-cols-9" id="character_select"></div>
+        </div>
+
+        <!-- Project Contributors -->
+        <div class="relative mt-8 px-8 py-6 bg-secondary-800 z-10 -skew-x-6 transform-gpu pointer-events-none shadow-lg">
+            <h1 class="tracking-[0.2em] text-2xl font-extrabold text-white uppercase skew-x-6 transform-gpu">
+                project contributors
+                <span class="block -mt-1 text-base -skew-x-12">プロジェクト貢献者</span>
+            </h1>
+        </div>
+        <div class="relative -mt-4 mx-8 px-8 pt-8 pb-6 bg-secondary-700">
+            <div class="text-white space-y-2">
+                <p>
+                    Special thanks to Leayal and all those who contributed maintain the Skilltree:
+                    <ul class="pl-6 list-none space-y-4" id="contributors"></ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="space-x-0">
+                <a class="transition-all duration-100 bg-white px-3 py-1 text-secondary-900 text-xs font-bold uppercase rounded-md hover:bg-primary-500 hover:text-white hover:shadow" href="#">Fork</a>
+                <a class="transition-all duration-100 bg-white px-3 py-1 text-secondary-900 text-xs font-bold uppercase rounded-md hover:bg-primary-500 hover:text-white hover:shadow" href="#">Report Issues</a>
+                <a class="transition-all duration-100 bg-white px-3 py-1 text-secondary-900 text-xs font-bold uppercase rounded-md hover:bg-primary-500 hover:text-white hover:shadow" href="#">Download Source</a>
+            </div>
+
+            <div class="mt-4">
+                <p class="italic">Content is available under <a class="link" href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike</a> unless stated.</p>
+                <p class="italic">Official Art, Game Content and Screenshots are trademarks and copyrights of <a class="link" href="http://www.liongames.co.kr/Front/" target="_blank">Lion Games</a> and the game's publishers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/character_select.js"></script>
+    <script src="./assets/js/contributors.js"></script>
+    <script src="./assets/js/jquery-sakura.js"></script>
+    <script>
+        $(function () { $('body').sakura(); });
+    </script>
+</body>
+</html>
